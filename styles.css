@@ -457,7 +457,7 @@ footer span {
 
   .about,
   .services {
-    height: 100vh;
+    height: 150vh;
   }
 }
 
@@ -465,7 +465,7 @@ footer span {
   .hero,
   .about,
   .services {
-    height: 115vh;
+    height: 160vh;
   }
 }
 
