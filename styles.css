@@ -1,0 +1,527 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  color: #2F2F2F;
+}
+
+.navbar {
+  display: flex;
+  height: 6em;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(47, 47, 47, .4);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  transition: .4s;
+  backdrop-filter: none;
+}
+
+.navbar a:nth-child(1) {
+  width: 5em;
+  height: 5em;
+}
+
+.navbar a img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 1em;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  transition: .4s;
+  cursor: pointer;
+  margin-right: 2em;
+  font-weight: 700;
+  padding: .2em .8em;
+  border-radius: 1em;
+}
+
+.navbar li a {
+  color: #DFF8E5;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.navbar li:hover,
+.calltoaction:hover {
+  scale: 1.2;
+}
+
+.calltoaction {
+  background-color: #DFF8E5;
+  font-weight: 700;
+  padding: .4em 2em;
+  border-radius: 1em;
+  transition: .4s;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #2F2F2F;
+  text-decoration: none;
+}
+
+.separator {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: -5em;
+}
+
+.hero {
+  background-image: url("./assets/images/bg3.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+  border-bottom-left-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.hero h2 {
+  padding-top: 3em;
+  padding-left: 1.2em;
+  font-weight: 700;
+  font-size: 5.5em;
+  color: #fff;
+  line-height: 1em;
+}
+
+.hero a {
+  display: block;
+  margin: 3em 5.5em;
+}
+
+.about,
+.services,
+.contact {
+  position: relative;
+}
+
+.about h3,
+.services h3,
+.contact h3 {
+  font-size: 4em;
+  margin: .5em 0 .5em 2em;
+}
+
+.about {
+  height: 75vh;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+}
+
+.aboutList {
+  display: flex;
+  max-width: 85vw;
+  margin: 0 auto;
+  background-color: #eaeaea;
+  padding: 2em;
+  border-radius: 1.5em;
+}
+
+.aboutQuotes,
+.aboutNumbers,
+.aboutSpecializations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  border-right: 3px solid #fff;
+}
+
+.aboutSpecializations {
+  border-right: none;
+}
+
+.aboutQuotesTitle,
+.aboutNumbersTitle,
+.aboutSpecializationsTitle {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.aboutQuotes p,
+.aboutNumbers p,
+.aboutSpecializations p {
+  width: 100%;
+  padding-left: 1em;
+}
+
+.services {
+  background-color: #DFF8E5;
+  height: 75vh;
+  border-bottom-left-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+}
+
+.services h3 {
+  padding-top: .5em;
+}
+
+.servicesList {
+  background-color: #fff;
+  display: flex;
+  max-width: 85vw;
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 1.5em;
+}
+
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  padding: 1em;
+  margin-right: 1em;
+  border-radius: 1.5em;
+  border: 3px solid #fff;
+  transition: .4s;
+  background-color: #DFF8E5;
+}
+
+.serviceList:hover {
+  scale: 1.05;
+}
+
+.serviceList:nth-child(4) {
+  margin-right: 0;
+}
+
+.serviceList svg {
+  width: 4em;
+  height: 4em;
+  margin-bottom: .5em;
+}
+
+.serviceList h4 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  min-height: 2.5em;
+}
+
+.serviceList p {
+  color: #494949;
+}
+
+.contact {
+  background: #fff;
+}
+
+.contactArea {
+  max-width: 85vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactLeft {
+  flex: 2;
+}
+
+.contactLeft p {
+  color: #494949;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.contactRight {
+  flex: 1;
+}
+
+.contactRight img {
+  margin: 2em;
+  width: 4em;
+  height: 4em;
+  transition: .4s;
+}
+
+.contactRight a img:hover {
+  scale: 1.2;
+}
+
+footer {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  background-color: #DFF8E5;
+}
+
+footer span {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 1500px) {
+  .services {
+    height: 85vh;
+  }
+
+  .serviceList h4 {
+    min-height: 3em;
+  }
+}
+
+@media screen and (max-width: 1135px) {
+  .calltoaction {
+    margin-right: 3em;
+  }
+
+  .about h3,
+  .services h3,
+  .contact h3 {
+    font-size: 3em;
+  }
+
+  .about {
+    height: 90vh;
+  }
+
+  .services {
+    height: 135vh;
+  }
+
+  .servicesList {
+    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .serviceList {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .navbar a:nth-child(1) {
+    width: 3em;
+    height: 3em;
+  }
+
+  .navbar li {
+    font-size: .8em;
+  }
+
+  .calltoaction {
+    font-size: 1em;
+  }
+
+  .hero h2 {
+    font-size: 4em;
+  }
+
+  .aboutList {
+    flex-direction: column;
+  }
+
+  .aboutQuotes,
+  .aboutNumbers,
+  .aboutSpecializations {
+    align-items: normal;
+    border-right: none;
+    margin-bottom: .5em;
+  }
+
+  .about h3,
+  .services h3,
+  .contact h3 {
+    font-size: 3em;
+  }
+
+  .about {
+    height: 130vh;
+  }
+
+  footer span {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .calltoaction {
+    margin-right: 2em;
+  }
+
+  .navbar li {
+    margin-right: 0;
+  }
+
+  .hero h2 {
+    font-size: 3em;
+  }
+
+  .about {
+    height: 150vh;
+  }
+
+  .services {
+    height: 165vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .hero h2 {
+    width: 10em;
+    padding-left: .8em;
+    padding-top: 8em;
+    font-size: 2em;
+  }
+
+  .hero a {
+    margin: 3em 2.5em;
+  }
+
+  .about {
+    height: 115vh;
+  }
+
+  .about h3,
+  .services h3,
+  .contact h3 {
+    font-size: 1.5em;
+  }
+
+  .aboutQuotesTitle,
+  .aboutNumbersTitle,
+  .aboutSpecializationsTitle {
+    font-size: 1.2em;
+  }
+
+  .aboutQuotes p,
+  .aboutNumbers p,
+  .aboutSpecializations p {
+    font-size: .7em;
+  }
+
+  .services {
+    height: 155vh;
+  }
+
+  .servicesList {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100vw;
+  }
+
+  .serviceList svg {
+    width: 2em;
+    height: 2em;
+  }
+
+  .serviceList h4 {
+    font-size: 1em;
+  }
+
+  .serviceList p {
+    font-size: .8em;
+  }
+
+  .contactArea {
+    display: block;
+  }
+
+  .contactLeft p {
+    font-size: .8em;
+  }
+
+  footer span {
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-height: 770px) {
+  .hero {
+    height: 90vh;
+  }
+
+  .about,
+  .services {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-height: 680px) {
+  .hero,
+  .about,
+  .services {
+    height: 115vh;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .navbar {
+    height: 10em;
+  }
+
+  .navbar a:nth-child(1) {
+    width: 8em;
+    height: 8em;
+  }
+
+  .navbar li a {
+    font-size: 2.2em;
+  }
+
+  .calltoaction {
+    font-size: 2.5em;
+  }
+
+  .hero h2 {
+    font-size: 7.5em;
+  }
+
+  .about h3, .services h3, .contact h3 {
+    font-size: 6em;
+  }
+
+  .aboutQuotesTitle, .aboutNumbersTitle, .aboutSpecializationsTitle {
+    font-size: 4em;
+  }
+
+  .aboutQuotes p, .aboutNumbers p, .aboutSpecializations p {
+    font-size: 1.5em;
+  }
+
+  .serviceList svg {
+    width: 8em;
+    height: 8em;
+  }
+
+  .serviceList h4 {
+    font-size: 2.5em;
+  }
+
+  .serviceList p {
+    font-size: 1.2em;
+  }
+
+  .contactLeft p {
+    font-size: 2em;
+  }
+
+  .contactRight img {
+    width: 8em;
+    height: 8em;
+  }
+}
